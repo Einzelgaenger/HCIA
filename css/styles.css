@@ -1,0 +1,292 @@
+    /* General Styles */
+    body {
+        font-family: 'Georgia', 'Garamond', 'Times New Roman', serif; /* Menggunakan font sistem */
+        font-size: 16px; /* Ukuran font default */
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #f8cdda, #1d2b64);
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Memastikan footer tetap di bawah */
+    }
+
+    h1, h2, h3 {
+        font-family: 'Baskerville', serif; /* Menggunakan Baskerville untuk heading */
+    }
+
+    header {
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Navbar Styles */
+    nav {
+        background-color: rgba(255, 255, 255, 0.9); /* Background with slight transparency */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        padding: 10px 0; /* Padding for the navbar */
+    }
+
+    nav ul {
+        list-style: none; /* Remove default list styles */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+        display: flex; /* Use flexbox for horizontal layout */
+        justify-content: center; /* Center the items */
+    }
+
+    nav ul li {
+        margin: 0 20px; /* Space between items */
+    }
+
+    nav ul li a {
+        text-decoration: none; /* Remove underline */
+        color: #1d2b64; /* Text color */
+        font-weight: bold; /* Bold text */
+        padding: 10px 15px; /* Padding for clickable area */
+        border-radius: 5px; /* Rounded corners */
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    }
+
+    nav ul li a:hover {
+        background-color: #f8cdda; /* Background color on hover */
+        color: #1d2b64; /* Text color on hover */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+    }
+
+    .banner {
+        text-align: center;
+        margin: 40px 0;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        background: transparent; /* Removed white background */
+    }
+
+    .banner h2 {
+        font-family: 'Playfair Display', serif; /* Heading font */
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .banner-images {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px; /* Space between images */
+    }
+
+    .banner-item {
+        flex: 1 1 30%; /* Responsive sizing */
+        max-width: 280px; /* Limit max width */
+        text-align: center;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.9); /* Light background for items */
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .banner-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .banner-image {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .banner-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .bestsellers {
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    .bestseller-items {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px; /* Space between products */
+    }
+
+    .product {
+        flex: 1 1 200px; /* Responsive sizing */
+        max-width: 220px; /* Limit max width */
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+    }
+
+    .product:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-image {
+        width: 100%;
+        border-bottom: 2px solid #f8cdda;
+        border-radius: 10px;
+    }
+
+    .product-name {
+        font-family: 'Playfair Display', serif; /* Use a serif font for product names */
+        font-size: 1.5em; /* Larger font size for product names */
+        margin: 10px 0 5px; /* Margin for spacing */
+    }
+
+    .product-description {
+        font-family: 'Lora', serif; /* Use a serif font for descriptions */
+        font-size: 1em; /* Standard font size for descriptions */
+        color: #666; /* Slightly lighter color for descriptions */
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px 0;
+        background: rgba(255, 255, 255, 0.9);
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 768px) {
+        .banner-images {
+            flex-direction: column; /* Stack images on smaller screens */
+            align-items: center;
+        }
+        .banner-item {
+            max-width: 90%; /* Adjust max width for smaller screens */
+        }
+        .bestsellers {
+            flex-direction: column; /* Stack products on smaller screens */
+            align-items: center;
+        }
+    }
+
+    /* Typing Animation */
+    .typing-animation {
+        display: inline-block;
+        border-right: 2px solid #333; /* Cursor effect */
+        animation: blink 0.7s step-end infinite; /* Blinking cursor */
+    }
+
+    @keyframes blink {
+        0%, 100% {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #333;
+        }
+    }
+
+/* Product Page Styles */
+.product-section {
+    margin: 40px 0; /* Jarak antar section */
+    text-align: center; /* Pusatkan teks */
+}
+
+.product-section h2 {
+    font-family: 'Playfair Display', serif; /* Font untuk judul section */
+    font-size: 2em; /* Ukuran font judul */
+    margin-bottom: 20px; /* Jarak bawah judul */
+}
+
+.product-list {
+    display: flex; /* Gunakan flexbox untuk tata letak produk */
+    justify-content: center; /* Pusatkan produk */
+    flex-wrap: wrap; /* Biarkan produk membungkus ke baris berikutnya */
+    gap: 20px; /* Jarak antar produk */
+}
+
+.product {
+    flex: 1 1 200px; /* Ukuran responsif */
+    max-width: 300px; /* Lebar maksimum produk */
+    text-align: center; /* Pusatkan teks dalam produk */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transisi halus untuk hover */
+    border-radius: 10px; /* Sudut membulat */
+    overflow: hidden; /* Sembunyikan overflow */
+    background: #fff; /* Latar belakang putih */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan produk */
+    padding: 15px; /* Padding dalam produk */
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Efek hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Bayangan lebih dalam saat hover */
+}
+
+.product-image {
+    width: 100%; /* Lebar gambar 100% */
+    border-bottom: 2px solid #f8cdda; /* Garis bawah */
+    border-radius: 10px; /* Sudut membulat */
+}
+
+.product-name {
+    font-family: 'Playfair Display', serif; /* Font untuk nama produk */
+    font-size: 1.5em; /* Ukuran font nama produk */
+    margin: 10px 0 5px; /* Margin untuk nama produk */
+}
+
+.product-description {
+    font-family: 'Lora', serif; /* Font untuk deskripsi produk */
+    font-size: 1em; /* Ukuran font deskripsi */
+    color: #666; /* Warna deskripsi */
+}
+
+/* Media Queries untuk Responsivitas */
+@media screen and (max-width: 768px) {
+    .product-list {
+        flex-direction: column; /* Stack produk pada layar kecil */
+        align-items: center; /* Pusatkan produk */
+    }
+}
+
+/*Show image*/
+/* Popup Styles */
+.popup {
+    display: none; /* Sembunyikan popup secara default */
+    position: fixed; /* Tetap di posisi tetap */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Latar belakang hitam dengan transparansi */
+    justify-content: center; /* Pusatkan konten */
+    align-items: center; /* Pusatkan konten */
+    z-index: 1000; /* Pastikan popup di atas elemen lain */
+}
+
+.popup-image {
+    max-width: 90%; /* Lebar maksimum gambar */
+    max-height: 90%; /* Tinggi maksimum gambar */
+    border-radius: 10px; /* Sudut membulat */
+}
+
+
